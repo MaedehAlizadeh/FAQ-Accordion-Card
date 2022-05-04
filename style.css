@@ -3,5 +3,64 @@
 */
 
 /* File Content :
-    
+    General Style
+    Images Section
 */
+
+
+/* ====== General Style ====== */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans';
+    font-size: 14px;
+}
+
+body {
+    background: linear-gradient(to top, #6565e7 0%,#af67e9 100%) fixed;
+    -moz-background: linear-gradient(to top, #6565e7 ,#af67e9) fixed;
+    -webkit-background: linear-gradient(to top, #6565e7 ,#af67e9) fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+
+/* ====== Image Section ====== */
+.faq-box {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-columns: 480px 480px;
+    column-gap: 40px;
+}
+
+.pattern {
+    position: absolute;
+    top: -296px;
+    left: -577px;
+    clip-path: inset(296px 0 150px 569px);
+}
+
+.illustration-online{
+    position: absolute;
+    top: 67px;
+    left: -84px;
+    clip-path: inset(0 0 0 84px);
+}
+
+.msg-box {
+    position: absolute;
+    top: 200px;
+    left: -92px;
+}
+
+
