@@ -64,3 +64,64 @@ body {
 }
 
 
+/* ====== Questions Section ====== */
+.question-box {
+    margin-top: 4rem;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+button {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 1rem;
+}
+.dropdown-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.dropdown-btn::after{
+    content: url('./images/icon-arrow-down.svg');
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active::after {
+    content: url('./images/icon-arrow-down.svg');
+    transform: rotate(180deg);
+}
+
+.dropdown-btn:hover {
+    color: #f47c57;
+}
+
+
+.dropdown-menu {
+    display: none;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    display: block;
+    margin: 0.75rem 0;
+    padding: 0.25rem;
+    clear: both;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.divider {
+    border-bottom: 2px solid #e7e7e9;
+    margin: 1rem 0;
+}
