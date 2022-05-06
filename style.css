@@ -27,7 +27,7 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
 
@@ -35,7 +35,7 @@ body {
 .faq-box {
     position: relative;
     width: 1000px;
-    height: 1800px;
+    height: 500px;
     border-radius: 1rem;
     background-color: #ffffff;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
@@ -48,7 +48,7 @@ body {
     position: absolute;
     top: -296px;
     left: -577px;
-    clip-path: inset(296px 0 1180px 569px);
+    clip-path: inset(296px 0 150px 569px);
 }
 
 .illustration-online{
@@ -89,14 +89,16 @@ button {
     background-color: transparent;
 }
 
+/* dropdown menu icon */
 .dropdown-btn::after{
     content: url('./images/icon-arrow-down.svg');
     margin-left: 6rem;
 }
 
+/* dropdown menu icon */
 .active::after {
     content: url('./images/icon-arrow-down.svg');
-    transform: rotateY(180deg); /* why that's not working? */
+    transform: rotateY(180deg);
 }
 
 .dropdown-btn:hover {
@@ -107,16 +109,12 @@ button {
     display: none;
     overflow:hidden;
     min-width: 160px;
-    max-height: 50px;
-    transition: max-height 0.5s ease-in-out;
     margin: 0;
     padding: 0;
 }
 
 .show-dropmenu {
     display: block;
-    max-height: 80px;
-    /* transition: max-height 1s ease-in-out; */
 }
 
 .dropdown-item {
@@ -135,3 +133,61 @@ button {
 }
 
 
+/* FAQ For Mobile */
+@media (max-width: 992px) {
+    /* === Image Section === */
+    .faq-box {
+        display: block;
+        width: 340px;
+        height: 550px;
+        margin-top: 5rem;
+    }
+    .pattern {
+        top: -11.8rem;
+        left: 3.2rem;
+        width: 250px;
+        height: 280px;
+        clip-path: inset(60% 0 0 0);
+    }
+    
+    .illustration-online {
+        top: -8.6rem;
+        left: 3.2rem;
+        width: 250px;
+        height: 200px;
+        clip-path: none;
+    }
+
+    .msg-box {
+        width: 100px;
+        top: -3.3rem;
+        left: 2.8rem;
+    }
+
+    /* === Questions Section === */
+    .question-box {
+        margin-top: 10rem;
+        margin-left: 2rem;
+        width: 300px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .dropdown-btn::after{
+        margin: 1rem;
+    }
+
+    .dropdown-item {
+        width: 290px;
+        margin: 0.75rem 0;
+        padding: 0.25rem;
+        color: #787887;
+        background-color: transparent;
+    }
+
+    .divider {
+        width: 280px;
+    }
+}
