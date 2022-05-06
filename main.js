@@ -3,11 +3,13 @@ dropBtn.forEach( item => item.addEventListener('click' , openDropMenu) );
 
 function openDropMenu(event){
     event.preventDefault();
+    this.classList.toggle("active");
     const dropMenu = this.nextElementSibling;
-    if (dropMenu.style.display === "block") {
-        dropMenu.style.display = "none";
+    if (dropMenu.classList.contains('show-dropmenu')) {
+        dropMenu.classList.remove('show-dropmenu');
+        this.style.fontWeight = "normal";
     } else {
-        dropMenu.style.display = "block";
-        dropBtn.style.fontW
+        dropMenu.classList.add('show-dropmenu');
+        this.style.fontWeight = "700";
     };
 }
